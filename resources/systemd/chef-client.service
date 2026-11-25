@@ -1,0 +1,9 @@
+[Unit]
+Description=Cinc Client
+
+[Service]
+ExecStart=/usr/lib/redborder/bin/rb_cinc-client_start.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

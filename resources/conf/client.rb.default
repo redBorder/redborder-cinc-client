@@ -1,0 +1,12 @@
+log_level        	:info
+log_location     	STDOUT
+node_name	 	"HOSTNAME"
+client_key       	"/etc/chef/client.pem"
+validation_client_name 	"redborder-validator"
+validation_key   	"/etc/chef/redborder-validator.pem"
+chef_server_url  	"https://erchef.redborder.cluster/organizations/redborder"
+ssl_verify_mode  	:verify_none
+# Cinc defaults to /var/cinc; keep the cache and backups where redborder expects them
+file_cache_path  	"/var/chef/cache"
+file_backup_path 	"/var/chef/backup"
+ohai.plugin_path |= ['/etc/chef/ohai/plugins']
